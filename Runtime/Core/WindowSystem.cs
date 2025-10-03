@@ -1097,6 +1097,8 @@ namespace UnityEngine.UI.Windows {
 
                 instance.OnShowBeginInternal();
                 instance.OnShowBegin();
+                if (instance.GetState() == ObjectState.Hidden)
+                    return;
                 WindowSystem.RaiseEvent(instance, WindowEvent.OnShowBegin);
 
             }
