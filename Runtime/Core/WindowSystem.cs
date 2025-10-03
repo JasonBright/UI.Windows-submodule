@@ -234,6 +234,7 @@ namespace UnityEngine.UI.Windows {
         
         OnLayoutReady,
 
+        OnLoaded
     }
 
     [DefaultExecutionOrder(-1000)]

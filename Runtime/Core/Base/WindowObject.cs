@@ -1188,6 +1188,7 @@ namespace UnityEngine.UI.Windows {
                 }
 
                 this.SetState(ObjectState.Loaded);
+                WindowSystem.RaiseEvent( this, WindowEvent.OnLoaded );
 
                 this.audioEvents.Initialize(this);
 
