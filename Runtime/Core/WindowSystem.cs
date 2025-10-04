@@ -412,13 +412,8 @@ namespace UnityEngine.UI.Windows {
                     Debug.LogWarning($"Window with hash `{key}` already exists in windows hash map!");
                     
                 }
-
             }
-
-        }
-
-        public virtual void Start() {
-
+            
             if (this.modules != null) {
 
                 for (int i = 0; i < this.modules.Count; ++i) {
@@ -429,6 +424,10 @@ namespace UnityEngine.UI.Windows {
 
             }
 
+        }
+
+        public virtual void Start() {
+            
             if (this.showRootOnStart == true) WindowSystem.ShowRoot();
 
         }
