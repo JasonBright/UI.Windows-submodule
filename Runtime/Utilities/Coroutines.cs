@@ -4,6 +4,7 @@ using System.Linq;
 
 namespace UnityEngine.UI.Windows.Utilities {
 
+	[DefaultExecutionOrder(-1000)]
     public class Coroutines : MonoBehaviour {
 
         private static Coroutines instance;
@@ -104,6 +105,10 @@ namespace UnityEngine.UI.Windows.Utilities {
         
         public static Coroutine Run(IEnumerator coroutine) {
 
+	        if (instance == null)
+	        {
+		        instance = FindAnyObjectByType<Coroutines>();
+	        }
 	        return Coroutines.instance.StartCoroutine(coroutine);
 
         }
